@@ -16,6 +16,8 @@ var codeBars = [
             "bar40", "bar41"
             ];
 
+
+
 var barLengths = [
                 6, 3, 6, 
                 3, 7, 3, 
@@ -50,280 +52,19 @@ var timeLengths = [
                 2580, 2660
                 ];
 
-// above this is test
+// removes div elements
+setTimeout(function() {     
+  setInterval(function() {
+    var element = document.getElementById(codeBars[0]);
+    element.outerHTML = "";
+    delete element;
+    codeBars.shift();
+  }, 50); // runs every 50 milliseconds
+}, 720);  // delays start time
 
+// create pattern
 function move() {
-  var elem = document.getElementById("bar1");   
-  var width = 1;
-  var id = setInterval(frame, 8);
-  function frame() {
-    if (width >= 4) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-move();
-
-
-setTimeout(function() {
-var element = document.getElementById("bar1");
-element.outerHTML = "";
-delete element;
-}, 720);
-
-
-setTimeout(function() {
-var element = document.getElementById("bar2");
-element.outerHTML = "";
-delete element;
-}, 800);
-
-setTimeout(function() {
-var element = document.getElementById("bar3");
-element.outerHTML = "";
-delete element;
-}, 800);
-
-setTimeout(function() {
-var element = document.getElementById("bar4");
-element.outerHTML = "";
-delete element;
-}, 880);
-
-setTimeout(function() {
-var element = document.getElementById("bar5");
-element.outerHTML = "";
-delete element;
-}, 880);
-
-setTimeout(function() {
-var element = document.getElementById("bar6");
-element.outerHTML = "";
-delete element;
-}, 960);
-
-setTimeout(function() {
-var element = document.getElementById("bar7");
-element.outerHTML = "";
-delete element;
-}, 1040);
-
-setTimeout(function() {
-var element = document.getElementById("bar8");
-element.outerHTML = "";
-delete element;
-}, 1040);
-
-setTimeout(function() {
-var element = document.getElementById("bar9");
-element.outerHTML = "";
-delete element;
-}, 1220);
-
-setTimeout(function() {
-var element = document.getElementById("bar10");
-element.outerHTML = "";
-delete element;
-}, 1220);
-
-setTimeout(function() {
-var element = document.getElementById("bar11");
-element.outerHTML = "";
-delete element;
-}, 1300);
-
-setTimeout(function() {
-var element = document.getElementById("bar12");
-element.outerHTML = "";
-delete element;
-}, 1300);
-
-setTimeout(function() {
-var element = document.getElementById("bar13");
-element.outerHTML = "";
-delete element;
-}, 1380);
-
-setTimeout(function() {
-var element = document.getElementById("bar14");
-element.outerHTML = "";
-delete element;
-}, 1460);
-
-setTimeout(function() {
-var element = document.getElementById("bar15");
-element.outerHTML = "";
-delete element;
-}, 1460);
-
-setTimeout(function() {
-var element = document.getElementById("bar16");
-element.outerHTML = "";
-delete element;
-}, 1460);
-
-setTimeout(function() {
-var element = document.getElementById("bar17");
-element.outerHTML = "";
-delete element;
-}, 1540);
-
-setTimeout(function() {
-var element = document.getElementById("bar18");
-element.outerHTML = "";
-delete element;
-}, 1540);
-
-setTimeout(function() {
-var element = document.getElementById("bar19");
-element.outerHTML = "";
-delete element;
-}, 1620);
-
-setTimeout(function() {
-var element = document.getElementById("bar20");
-element.outerHTML = "";
-delete element;
-}, 1620);
-
-setTimeout(function() {
-var element = document.getElementById("bar21");
-element.outerHTML = "";
-delete element;
-}, 1620);
-
-setTimeout(function() {
-var element = document.getElementById("bar22");
-element.outerHTML = "";
-delete element;
-}, 1700);
-
-setTimeout(function() {
-var element = document.getElementById("bar23");
-element.outerHTML = "";
-delete element;
-}, 1700);
-
-setTimeout(function() {
-var element = document.getElementById("bar24");
-element.outerHTML = "";
-delete element;
-}, 1780);
-
-setTimeout(function() {
-var element = document.getElementById("bar25");
-element.outerHTML = "";
-delete element;
-}, 1860);
-
-setTimeout(function() {
-var element = document.getElementById("bar26");
-element.outerHTML = "";
-delete element;
-}, 1940);
-
-setTimeout(function() {
-var element = document.getElementById("bar27");
-element.outerHTML = "";
-delete element;
-}, 2020);
-
-setTimeout(function() {
-var element = document.getElementById("bar28");
-element.outerHTML = "";
-delete element;
-}, 2020);
-
-setTimeout(function() {
-var element = document.getElementById("bar29");
-element.outerHTML = "";
-delete element;
-}, 2100);
-
-
-
-
-
-setTimeout(function() {
-var element = document.getElementById("bar30");
-element.outerHTML = "";
-delete element;
-}, 2180);
-
-
-setTimeout(function() {
-var element = document.getElementById("bar31");
-element.outerHTML = "";
-delete element;
-}, 2180);
-
-setTimeout(function() {
-var element = document.getElementById("bar32");
-element.outerHTML = "";
-delete element;
-}, 2180);
-
-setTimeout(function() {
-var element = document.getElementById("bar33");
-element.outerHTML = "";
-delete element;
-}, 2260);
-
-setTimeout(function() {
-var element = document.getElementById("bar34");
-element.outerHTML = "";
-delete element;
-}, 2260);
-
-setTimeout(function() {
-var element = document.getElementById("bar35");
-element.outerHTML = "";
-delete element;
-}, 2340);
-
-setTimeout(function() {
-var element = document.getElementById("bar36");
-element.outerHTML = "";
-delete element;
-}, 2340);
-
-setTimeout(function() {
-var element = document.getElementById("bar37");
-element.outerHTML = "";
-delete element;
-}, 2420);
-
-setTimeout(function() {
-var element = document.getElementById("bar38");
-element.outerHTML = "";
-delete element;
-}, 2420);
-
-setTimeout(function() {
-var element = document.getElementById("bar39");
-element.outerHTML = "";
-delete element;
-}, 2500);
-
-setTimeout(function() {
-var element = document.getElementById("bar40");
-element.outerHTML = "";
-delete element;
-}, 2580);
-
-setTimeout(function() {
-var element = document.getElementById("bar41");
-element.outerHTML = "";
-delete element;
-}, 2660);
-
-
-
-function move2() {
-  var elem = document.getElementById("bar2");   
+  var element = document.getElementById("bar1");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -331,7 +72,22 @@ function move2() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
+    }
+  }
+}
+move();
+
+function move2() {
+  var element = document.getElementById("bar2");   
+  var width = 1;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if (width >= 6) {
+      clearInterval(id);
+    } else {
+      width++; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -339,16 +95,17 @@ setTimeout(function() {
   move2();
 },120);
 
+
 function move3() {
-  var elem = document.getElementById("bar3");   
+  var element = document.getElementById("bar3");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 3) {
+    if (width >= 5) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -358,7 +115,7 @@ setTimeout(function() {
 
 
 function move4() {
-  var elem = document.getElementById("bar4");   
+  var element = document.getElementById("bar4");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -366,7 +123,7 @@ function move4() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -376,15 +133,15 @@ setTimeout(function() {
 }, 240);
 
 function move5() {
-  var elem = document.getElementById("bar5");   
+  var element = document.getElementById("bar5");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 3) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -393,15 +150,15 @@ setTimeout(function() {
 }, 300);
 
 function move6() {
-  var elem = document.getElementById("bar6");   
+  var element = document.getElementById("bar6");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 7) {
+    if (width >= 12) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -410,15 +167,15 @@ setTimeout(function() {
 }, 360);
 
 function move7() {
-  var elem = document.getElementById("bar7");   
+  var element = document.getElementById("bar7");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 3) {
+    if (width >= 5) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -427,15 +184,15 @@ setTimeout(function() {
 }, 420);
 
 function move8() {
-  var elem = document.getElementById("bar8");   
+  var element = document.getElementById("bar8");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 5) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -444,7 +201,7 @@ setTimeout(function() {
 }, 480);
 
 function move9() {
-  var elem = document.getElementById("bar9");   
+  var element = document.getElementById("bar9");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -452,7 +209,7 @@ function move9() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -461,15 +218,15 @@ setTimeout(function() {
 }, 540);
 
 function move10() {
-  var elem = document.getElementById("bar10");   
+  var element = document.getElementById("bar10");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 8) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -478,15 +235,15 @@ setTimeout(function() {
 }, 600);
 
 function move11() {
-  var elem = document.getElementById("bar11");   
+  var element = document.getElementById("bar11");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 5) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -495,15 +252,15 @@ setTimeout(function() {
 }, 660);
 
 function move12() {
-  var elem = document.getElementById("bar12");   
+  var element = document.getElementById("bar12");   
   var width = 1;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= 4) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -512,15 +269,15 @@ setTimeout(function() {
 }, 720);
 
 function move13() {
-  var elem = document.getElementById("bar13");   
+  var element = document.getElementById("bar13");   
   var width = 1;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= 7) {
+    if (width >= 10) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -529,15 +286,15 @@ setTimeout(function() {
 }, 780);
 
 function move14() {
-  var elem = document.getElementById("bar14");   
+  var element = document.getElementById("bar14");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 3) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -546,27 +303,7 @@ setTimeout(function() {
 }, 840);
 
 function move15() {
-  var elem = document.getElementById("bar15");   
-  var width = 1;
-  var id = setInterval(frame, 1);
-  function frame() {
-    if (width >= 2) {
-      clearInterval(id);
-    } else {
-      width++; 
-      elem.style.width = width + '%'; 
-    }
-  }
-}
-setTimeout(function() {
-  move15();
-}, 900);
-
-
-
-
-function move16() {
-  var elem = document.getElementById("bar16");   
+  var element = document.getElementById("bar15");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -574,7 +311,24 @@ function move16() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
+    }
+  }
+}
+setTimeout(function() {
+  move15();
+}, 900);
+
+function move16() {
+  var element = document.getElementById("bar16");   
+  var width = 1;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if (width >= 6) {
+      clearInterval(id);
+    } else {
+      width++; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -582,9 +336,8 @@ setTimeout(function() {
   move16();
 }, 960);
 
-
 function move17() {
-  var elem = document.getElementById("bar17");   
+  var element = document.getElementById("bar17");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -592,7 +345,7 @@ function move17() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -600,17 +353,16 @@ setTimeout(function() {
   move17();
 }, 1020);
 
-
 function move18() {
-  var elem = document.getElementById("bar18");   
+  var element = document.getElementById("bar18");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 5) {
+    if (width >= 8  ) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -619,15 +371,15 @@ setTimeout(function() {
 }, 1080);
 
 function move19() {
-  var elem = document.getElementById("bar19");   
+  var element = document.getElementById("bar19");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 4) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -636,15 +388,15 @@ setTimeout(function() {
 }, 1140);
 
 function move20() {
-  var elem = document.getElementById("bar20");   
+  var element = document.getElementById("bar20");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 6) {
+    if (width >= 7) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -653,7 +405,7 @@ setTimeout(function() {
 }, 1200);
 
 function move21() {
-  var elem = document.getElementById("bar21");   
+  var element = document.getElementById("bar21");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -661,7 +413,7 @@ function move21() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -671,7 +423,7 @@ setTimeout(function() {
 
 
 function move22() {
-  var elem = document.getElementById("bar22");   
+  var element = document.getElementById("bar22");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -679,7 +431,7 @@ function move22() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -688,15 +440,15 @@ setTimeout(function() {
 }, 1320);
 
 function move23() {
-  var elem = document.getElementById("bar23");   
+  var element = document.getElementById("bar23");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 5) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -705,15 +457,15 @@ setTimeout(function() {
 }, 1380);
 
 function move24() {
-  var elem = document.getElementById("bar24");   
+  var element = document.getElementById("bar24");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 6) {
+    if (width >= 8) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -722,15 +474,15 @@ setTimeout(function() {
 }, 1440);
 
 function move25() {
-  var elem = document.getElementById("bar25");   
+  var element = document.getElementById("bar25");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 6) {
+    if (width >= 9) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -739,15 +491,15 @@ setTimeout(function() {
 }, 1500);
 
 function move26() {
-  var elem = document.getElementById("bar26");   
+  var element = document.getElementById("bar26");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 5) {
+    if (width >= 7) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -756,15 +508,15 @@ setTimeout(function() {
 }, 1560);
 
 function move27() {
-  var elem = document.getElementById("bar27");   
+  var element = document.getElementById("bar27");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 5) {
+    if (width >= 8) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -772,17 +524,16 @@ setTimeout(function() {
   move27();
 }, 1640);
 
-
 function move28() {
-  var elem = document.getElementById("bar28");   
+  var element = document.getElementById("bar28");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 4) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -791,15 +542,15 @@ setTimeout(function() {
 }, 1640);
 
 function move29() {
-  var elem = document.getElementById("bar29");   
+  var element = document.getElementById("bar29");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 10) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -808,15 +559,15 @@ setTimeout(function() {
 }, 1700);
 
 function move30() {
-  var elem = document.getElementById("bar30");   
+  var element = document.getElementById("bar30");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 3) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -825,15 +576,15 @@ setTimeout(function() {
 }, 1700);
 
 function move31() {
-  var elem = document.getElementById("bar31");   
+  var element = document.getElementById("bar31");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -842,7 +593,7 @@ setTimeout(function() {
 }, 1760);
 
 function move32() {
-  var elem = document.getElementById("bar32");   
+  var element = document.getElementById("bar32");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -850,7 +601,7 @@ function move32() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -859,7 +610,7 @@ setTimeout(function() {
 }, 1760);
 
 function move33() {
-  var elem = document.getElementById("bar33");   
+  var element = document.getElementById("bar33");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
@@ -867,7 +618,7 @@ function move33() {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -876,15 +627,15 @@ setTimeout(function() {
 }, 1820);
 
 function move34() {
-  var elem = document.getElementById("bar34");   
+  var element = document.getElementById("bar34");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 6) {
+    if (width >= 11) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -893,15 +644,15 @@ setTimeout(function() {
 }, 1820);
 
 function move35() {
-  var elem = document.getElementById("bar35");   
+  var element = document.getElementById("bar35");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 3) {
+    if (width >= 7) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -910,15 +661,15 @@ setTimeout(function() {
 }, 1880);
 
 function move36() {
-  var elem = document.getElementById("bar36");   
+  var element = document.getElementById("bar36");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 8) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -927,15 +678,15 @@ setTimeout(function() {
 }, 1880);
 
 function move37() {
-  var elem = document.getElementById("bar37");   
+  var element = document.getElementById("bar37");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -945,15 +696,15 @@ setTimeout(function() {
 
 
 function move38() {
-  var elem = document.getElementById("bar38");   
+  var element = document.getElementById("bar38");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 4) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -963,15 +714,15 @@ setTimeout(function() {
 
 
 function move39() {
-  var elem = document.getElementById("bar39");   
+  var element = document.getElementById("bar39");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 4) {
+    if (width >= 8) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -981,15 +732,15 @@ setTimeout(function() {
 
 
 function move40() {
-  var elem = document.getElementById("bar40");   
+  var element = document.getElementById("bar40");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 3) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -998,15 +749,15 @@ setTimeout(function() {
 }, 2120);
 
 function move41() {
-  var elem = document.getElementById("bar41");   
+  var element = document.getElementById("bar41");   
   var width = 1;
   var id = setInterval(frame, 1);
   function frame() {
-    if (width >= 2) {
+    if (width >= 6) {
       clearInterval(id);
     } else {
       width++; 
-      elem.style.width = width + '%'; 
+      element.style.width = width + '%'; 
     }
   }
 }
@@ -1014,10 +765,13 @@ setTimeout(function() {
   move41();
 }, 2180);
 
+
+
+
 var s = document.getElementById('code-loader').style;
 s.opacity = 1;
 (function fade(){
-  (s.opacity-=.1)<0?s.display="none":setTimeout(fade,300)
+  (s.opacity-=.1)<0?s.display="none":setTimeout(fade,500)
 }
 )();
 
