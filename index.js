@@ -36,35 +36,48 @@ var lines = [
 "line13", "line14", "line15", "line16",
 "line17", "line18", "line19", "line20",
 "line21", "line22", "line23", "line24",
-"line25"
+"line25", "done"
 ];
 
+function setIntervalX(callback, delay, repetitions) {
+  var x = 0;
+  var intervalID = window.setInterval(function () {
 
-setTimeout(function() {     
-  setInterval(function() {
-    function move() {
-      var element = document.getElementById(codeBars[0]);
-      var barWidth = barLengths[0];  
-      var width = 1;
-      var id = setInterval(frame, 1);
-      function frame() {
-        if (width >= barWidth) {
-          clearInterval(id);
-        } else {
-          width++; 
-          element.style.width = width + '%'; 
-        }
-      }
-      codeBars.shift();
-      barLengths.shift();
+    callback();
+
+    if (++x === repetitions) {
+      window.clearInterval(intervalID);
     }
-    move();
-}, 60); // runs every 60 milliseconds
-}, 120);  // delays start time
+  }, delay);
+}
+
+setIntervalX(function () {
+  function move() {
+    var element = document.getElementById(codeBars[0]);
+    var barWidth = barLengths[0];
+    var width = 1;
+    var id = setInterval(frame, 1);
+    function frame() {
+      if (width >= barWidth ) {
+        clearInterval(id);
+      } else {
+        width++;
+        element.style.width = width + '%';
+      }
+    }
+    codeBars.shift();
+    barLengths.shift();
+  }
+  move();
+
+}, 60, 41); // runs every 60 milliseconds, 41 times
 
 // removes div elements
 setTimeout(function() {     
   setInterval(function() {
+    if (lines[0] === "done") {
+      return;
+    }
     var element1 = document.getElementById(lines[0]);
     element1.outerHTML = "";
     delete element1;
@@ -72,16 +85,18 @@ setTimeout(function() {
 }, 100); // runs every 50 milliseconds
 }, 720);  // delays start time
 
+/* 
 var s = document.getElementById('code-loader').style;
 s.opacity = 1;
 (function fade(){
-  (s.opacity-=.09)<0?s.display="none":setTimeout(fade,500)
+(s.opacity-=.09)<0?s.display="none":setTimeout(fade,500)
 }
 )();
 
 // removes code-container 
 setTimeout(function() {
-  var element = document.getElementById("code-container");
-  element.outerHTML = "";
-  delete element;
+var element = document.getElementById("code-container");
+element.outerHTML = "";
+delete element;
 }, 2850);
+*/
