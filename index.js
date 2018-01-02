@@ -39,42 +39,36 @@ var lines = [
 "line25", "done"
 ];
 
-$(window).scroll(function() {
-  var hT = $('#scroll-to').offset().top,
-  hH = $('#scroll-to').outerHeight(),
-  wH = $(window).height(),
-  wS = $(this).scrollTop();
-  console.log((hT-wH) , wS);
-  if (wS > 4250){
+function setIntervalX(callback, delay, repetitions) {
+  var x = 0;
+  var intervalID = window.setInterval(function () {
 
-    function setIntervalX(callback, delay, repetitions) {
-      var x = 0;
-      var intervalID = window.setInterval(function () {
-        callback();
-        if (++x === repetitions) {
-          window.clearInterval(intervalID);
-        }
-      }, delay);
+    callback();
+
+    if (++x === repetitions) {
+      window.clearInterval(intervalID);
     }
+  }, delay);
+}
 
-    setIntervalX(function () {
-      function move() {
-        var element = document.getElementById(codeBars[0]);
-        var barWidth = barLengths[0];
-        var width = 1;
-        var id = setInterval(frame, 1);
-        function frame() {
-          if (width >= barWidth ) {
-            clearInterval(id);
-          } else {
-            width++;
-            element.style.width = width + '%';
-          }
-        }
-        codeBars.shift();
-        barLengths.shift();
+setIntervalX(function () {
+  function move() {
+    var element = document.getElementById(codeBars[0]);
+    var barWidth = barLengths[0];
+    var width = 1;
+    var id = setInterval(frame, 1);
+    function frame() {
+      if (width >= barWidth ) {
+        clearInterval(id);
+      } else {
+        width++;
+        element.style.width = width + '%';
       }
-      move();
+    }
+    codeBars.shift();
+    barLengths.shift();
+  }
+  move();
 
 }, 60, 41); // runs every 60 milliseconds, 41 times
 
@@ -91,14 +85,13 @@ setTimeout(function() {
 }, 100); // runs every 50 milliseconds
 }, 720);  // delays start time
 
-// This fades out screen and removes code
+/* 
 var s = document.getElementById('code-loader').style;
 s.opacity = 1;
 (function fade(){
-  (s.opacity-=.09)<0?s.display="none":setTimeout(fade,500)
+(s.opacity-=.09)<0?s.display="none":setTimeout(fade,500)
 }
 )();
-/* 
 // removes code-container 
 setTimeout(function() {
 var element = document.getElementById("code-container");
@@ -106,5 +99,3 @@ element.outerHTML = "";
 delete element;
 }, 2850);
 */
-}
-});
