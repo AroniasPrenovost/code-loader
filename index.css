@@ -1,275 +1,91 @@
-html {
-  height:100%;
-}
 
-body {
-  height:100%;
-  width:100%;
-  overflow-x: hidden;
-  background-color: black; 
-  background-image: url(http://www.planwallpaper.com/static/images/space-wallpaper2.jpg) ;
-  background-position: center center;
-  background-repeat:  no-repeat;
-  background-attachment: fixed;
-  background-size:  cover;
-}
+  body {
+      height: 100%;
+      background: #ecf0f1;
+  }
 
-.wrapper {
-  height: 100%; 
-  width: 100%;
-}
+  .container {
+    position: absolute;
+  }
 
-#code-container {
-  background-color: black;
-  position:fixed;
-  width:100%;
-  height:100%;
-  z-index:1000;
-}
+  .outer-animation {
+    display: table;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #c7ecee;
+    transition: opacity 2s linear;
+  }
+  
+  .middle-animation {
+    display: table-cell;
+    vertical-align: middle;
+    height:100%;
+  }
 
-#code-loader {
-  position: absolute;
-  width: 300px;
-  height: 700px;
-  z-index: 15;
-  top: 50%;
-  left: 60%;
-  margin: -100px 0 0 -150px;
-  overflow:hidden;
-}
+  .animation-container {
+    width: auto;
+    height: 200px;
+    overflow: hidden;
+  }
 
-.message {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%; 
-  height:75%;
-  bottom: 0; 
-  display: block;
-  position: absolute;
-  margin-left:5%;
-  color: #fff;
-  padding: 0.5em;
-  color:white;
-}
+  .overlay {
+    width:100%;
+    height:320px;
+    z-index: 2;
+    position: fixed;
+    background: #c7ecee;
+    transition: height 3s linear;
+  }
 
-#bar1, #bar2, #bar3, #bar4, #bar5, #bar6, #bar7, #bar8, #bar9, #bar10, #bar11, #bar12, #bar13, #bar14, #bar15, #bar16, #bar17, #bar18, #bar19, #bar20, #bar21, #bar22, #bar23, #bar24, #bar25, #bar26, #bar27, #bar28, #bar29, 
-#bar30, #bar31, #bar32, #bar33, #bar34, #bar35, 
-#bar36, #bar37, #bar38, #bar39, #bar40, #bar41 {
-  width: 0%;
-  height: 5px;
-  margin-bottom:2px;
-  margin-left:4px;
-  background-color: #bdc3c7;
-}
+  .overlay:nth-child(1) {
+    top: 0;
+  }
 
-#bar2 {
-  margin-left:10px;
-  background-color: #efc88b;
-}
+  .overlay:nth-child(2) {
+    bottom: 0;
+  }
+  
+  .animated-block {
+      width: 100%;
+      height: 370px;
+      position: relative; 
+      overflow: hidden;
+      transition: height 6s linear;
+  }
+  
+  .inner-animation {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 100%;
+    background: transparent;
+    padding-left: 225px;
+  }
 
-#bar3 {
-  margin-left:30px;
-  margin-top:-7px
-}
+  .line {
+      width: 100%;
+      height: 12px;
+  }
 
-#bar4 {
-  background-color:#7FB069;
-  margin-left:20px;
-}
+  .bar {
+    height: 6px;
+    width: 0px;
+    margin-left: 3px; 
+    display: inline-block;
+    transition: all .2s linear; 
+    background-color: #1abc9c;   
+  }
 
-#bar5 {
-  float:left;
-  margin-left:58px;
-  margin-top: -7px;
-  background-color:#cf5c36;
-}
+  .margin-small {
+    margin-left: 12px;
+  }
 
-#bar6 {
-  margin-left: 30px;
-}
+  .margin-medium {
+    margin-left: 22px;
+  }
 
-#bar7 {
-  margin-left:30px;
-  background-color: #efc88b;
-
-}
-
-#bar8 {
-  margin-left:50px;
-  margin-top:-7px;
-  background-color:#cf5c36;
-}
-
-#bar9 {
-  margin-left:20px;
-  background-color: #efc88b;
-}
-
-#bar10 {
-  margin-left:10px;
-}
-
-#bar11 {
-  margin-left:20px;
-  background-color: #efc88b;
-}
-
-#bar12 {
-  margin-top:-7px;
-  margin-left:52px;
-  background-color:#7FB069;
-}
-
-#bar13 {
-  margin-left:30px;
-  background-color:#cf5c36;
-}
-
-#bar14 {
-  margin-left:40px;
-  background-color: #efc88b;
-}
-
-
-#bar15 {
-  margin-top:-7px;
-  margin-left:60px;
-  background-color:#cf5c36;
-}
-
-#bar16 {
-  margin-top:-7px;
-
-  margin-left:77px;
-  background-color: #efc88b;
-}
-
-#bar17 {
-  margin-left:50px;
-  background-color:#7FB069;
-}
-
-#bar18 {
-  margin-top:-7px;
-  margin-left:64px;
-}
-
-#bar19 {
-  margin-left:60px;
-  background-color: #efc88b;
-}
-
-#bar20 {
-  margin-top:-7px;
-  margin-left:74px;
-}
-
-#bar21 {
-  margin-top:-7px;
-  margin-left:100px;
-  background-color: #efc88b;
-}
-
-#bar22 {
-  margin-left:50px;
-  background-color:#7FB069;
-}
-
-#bar23 {
-  margin-top:-7px;
-  margin-left:76px;
-  background-color:#cf5c36;
-}
-
-#bar24 {
-  margin-left:40px;
-}
-
-#bar25 {
-  margin-left:20px;
-  background-color: #efc88b;
-}
-
-#bar26 {
-  margin-left:10px;
-}
-
-#bar27 {
-  margin-left:20px;
-  background-color: #efc88b;
-}
-
-#bar28 {
-  margin-top:-7px;
-  margin-left:52px;
-  background-color:#7FB069;
-}
-
-#bar29 {
-  margin-left:30px;
-  background-color:#cf5c36;
-}
-
-#bar30 {
-  margin-left:40px;
-  background-color: #efc88b;
-}
-
-#bar31 {
-  margin-top:-7px;
-  margin-left:51px;
-  background-color:#cf5c36;
-}
-
-#bar32 {
-  margin-top:-7px;
-  margin-left:65px;
-  background-color: #efc88b;
-}
-
-#bar33 {
-  margin-left:40px;
-  background-color:#7FB069;
-}
-
-#bar34 {
-  margin-top:-7px;
-  margin-left:63px;
-}
-
-#bar35 {
-  margin-left:50px;
-  background-color: #efc88b;
-}
-
-#bar36 {
-  margin-top:-7px;
-  margin-left:70px;
-  background
-}
-
-#bar37 {
-  margin-left:40px;
-  background-color: #efc88b;
-}
-
-#bar38 {
-  margin-top:-7px;
-  margin-left:66px;
-  background-color:#7FB069;
-}
-
-#bar39 {
-  margin-left:30px;
-  background-color:#cf5c36;
-}
-
-#bar40 {
-  margin-left:15px;
-}
-
-#bar41 {
-  margin-left:5px;
-  background-color: #efc88b;
-}
+  .margin-large {
+    margin-left: 32px;
+  }
