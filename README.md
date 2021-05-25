@@ -1,3 +1,3 @@
-## Code loading animation
+## Page load animation
 
 * only working in Firefox right now.
