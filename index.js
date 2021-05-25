@@ -74,7 +74,7 @@ setIntervalX(function () {
 //
 ////////////////////
 
-// minimuze height of block container 
+// minimize height of block container 
 setTimeout(function () {
     document.getElementsByClassName('animated-block')[0].style.height = 0;
 }, 250);

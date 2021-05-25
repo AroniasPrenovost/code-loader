@@ -1,7 +1,7 @@
 
   body {
-      height: 100%;
-      background: #ecf0f1;
+    height: 100%;
+    background: #ecf0f1;
   }
 
   .container {
@@ -15,6 +15,10 @@
     height: 100%;
     width: 100%;
     background: #c7ecee;
+    -webkit-transition: opacity 2s linear alternate;
+    -moz-transition: opacity 2s linear alternate;
+    -ms-transition: opacity 2s linear alternate;
+    -o-transition: opacity 2s linear alternate;
     transition: opacity 2s linear;
   }
   
@@ -36,6 +40,10 @@
     z-index: 2;
     position: fixed;
     background: #c7ecee;
+    -webkit-transition: height 3s linear alternate;
+    -moz-transition: height 3s linear alternate;
+    -ms-transition: height 3s linear alternate;
+    -o-transition: height 3s linear alternate;
     transition: height 3s linear;
   }
 
@@ -52,6 +60,10 @@
       height: 370px;
       position: relative; 
       overflow: hidden;
+      -webkit-transition: height 6s linear alternate;
+      -moz-transition: height 6s linear alternate;
+      -ms-transition: height 6s linear alternate;
+      -o-transition: height 6s linear alternate;
       transition: height 6s linear;
   }
   
@@ -74,6 +86,10 @@
     width: 0px;
     margin-left: 3px; 
     display: inline-block;
+    -webkit-transition: all .2s linear alternate;
+    -moz-transition: all .2s linear alternate;
+    -ms-transition: all .2s linear alternate;
+    -o-transition: all .2s linear alternate;
     transition: all .2s linear; 
     background-color: #1abc9c;   
   }
